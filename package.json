@@ -1,0 +1,38 @@
+{
+  "name": "conditionals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "typecheck": "tsc",
+    "compile": "babel src --out-dir dist --extensions \".ts\"",
+    "execute": "node dist/main.js",
+    "make": "npm run compile && npm run execute",
+    "full-run": "npm run typecheck && npm run make"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "rxjs": "^6.5.2",
+    "fs-extra": "^8.1.0",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/cli": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "typescript": "^3.5.3",
+    "eslint": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "@types/node": "^12.7.2",
+    "@types/fs-extra": "^8.0.0",
+    "@types/lodash": "^4.14.137"
+  }
+}
