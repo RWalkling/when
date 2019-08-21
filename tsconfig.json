@@ -4,7 +4,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
-    "outDir": "./dist",
+    "outDir": "./lib",
     "rootDir": "./src",
     "strict": true,
     "allowSyntheticDefaultImports": true,
@@ -17,10 +17,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedParameters": true,
     "downlevelIteration": true,
-    "lib": ["dom", "es2018", "esnext.asynciterable"],
-    "inlineSourceMap": true,
-    "inlineSources": true,
-    "emitDeclarationOnly": true
+    "lib": ["dom", "es2018", "esnext.asynciterable"]
   },
   "include": [
     "src"
