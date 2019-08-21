@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig-base",
+  "compilerOptions": {
+    "rootDir": "."
+  },
+  "files": [
+    "index.ts",
+    "utils.ts",
+    "when.ts",
+    "augmentations/global.ts"
+  ]
+}

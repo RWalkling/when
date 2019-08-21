@@ -1,5 +1,5 @@
-import sumBy from 'lodash/sumBy';
 import defunc, { Funcy, Defunced, fmap } from '@gecks/funcy';
+import { sumBool } from './utils';
 
 export const typeofValues = ['string', 'number', 'bigint', 'boolean', 'symbol', 'undefined', 'object', 'function'] as const;
 export type TypeofValues = typeof typeofValues[number];
@@ -78,7 +78,7 @@ export class Conditional<TValue, TResult = never> {
     public and = this.firstFalse;
 
     get count() {
-        return sumBy(this.truths, this.getTruth as any) | 0;
+        return sumBool(this.truths.map(this.getTruth));
     }
 }
 

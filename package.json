@@ -1,20 +1,26 @@
 {
   "name": "@gecks/when",
   "version": "0.0.1",
-  "description": "A TypeScript function for conditional control flow",
+  "description": "Some TypeScript utilities for conditional control flow",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "np": {
     "contents": "lib"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit",
+    "typecheck:source": "tsc --build src/tsconfig-check.json",
+    "typecheck:tests": "tsc --build test",
+
     "compile": "babel src --out-dir lib --extensions \".ts\"",
     "execute": "node lib/main.js",
     "make": "npm run compile && npm run execute",
-    "full-run": "npm run typecheck && npm run make",
+    "full-run": "npm run typecheck:source && npm run make",
+
     "test": "jest",
-    "prepublishOnly": "tsc --emitDeclarationOnly && npm run compile"
+
+    "build:types": "tsc --build src",
+
+    "ready": "npm run typecheck:tests && npm run build:types && npm run compile"
   },
   "repository": {
     "url": "https://github.com/RWalkling/when"
@@ -24,9 +30,7 @@
   "dependencies": {
     "typescript": "^3.5.3",
     "@types/node": "^12.7.2",
-    "@gecks/funcy": "^0.1.5",
-    "@types/lodash": "^4.14.137",
-    "lodash": "^4.17.15"
+    "@gecks/funcy": "^0.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
