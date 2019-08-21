@@ -1,6 +1,6 @@
 {
   "name": "@gecks/when",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Some TypeScript utilities for conditional control flow",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -10,16 +10,12 @@
   "scripts": {
     "typecheck:source": "tsc --build src/tsconfig-check.json",
     "typecheck:tests": "tsc --build test",
-
     "compile": "babel src --out-dir lib --extensions \".ts\"",
     "execute": "node lib/main.js",
     "make": "npm run compile && npm run execute",
     "full-run": "npm run typecheck:source && npm run make",
-
     "test": "jest",
-
     "build:types": "tsc --build src",
-
     "ready": "npm run typecheck:tests && npm run build:types && npm run compile"
   },
   "repository": {
