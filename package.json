@@ -1,6 +1,6 @@
 {
   "name": "@gecks/when",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A TypeScript function for conditional control flow",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
